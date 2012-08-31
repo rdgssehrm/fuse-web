@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<!-- HTML 5, probably -->
+<html>
+  <head>
+	<title>FUSE data server</title>
+
+	<script src="js/jquery-1.8.1.js"></script>
+	<script src="js/fuse-data.js"></script>
+	<script src="js/series.js"></script>
+
+	<script>
+	  $(document).ready(function(){
+	  	$Series.load_all();
+	  });
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="artefacts/css/default.css" />
+  </head>
+  <body>
+	<h1>FUSE data</h1>
+	<div id="data-series">
+	<h2>List of data series</h2>
+	<div id="data-series-list"></div>
+	</div>
+
+	<div id="example-layout">
+	  <p>Sample objects, to paste into the display where necessary:</p>
+	  <div class="series-meta">
+		<p class="series name"></p>
+		<p class="series epoch"></p>
+	  </div>
+	</div>
+  </body>
+</html>
