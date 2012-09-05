@@ -1,4 +1,9 @@
 #example-layout {
-   /*display: none;*/
+   display: none;
    border: solid 3px red;
+}
+
+.thumbnail.graph {
+   width: 600px;
+   height: 75px;
 }
