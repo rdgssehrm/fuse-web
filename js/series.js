@@ -59,7 +59,7 @@ var $Series = new function() {
 							  var new_line = $("#example-layout .series-meta").clone();
 							  new_line.data("series-data", ser);
 							  new_line.attr("id", "series-meta-" + ser.id);
-							  new_line.find(".name").text(ser.id);
+							  new_line.find(".name").text(ser.name);
 							  new_line.find(".epoch").text(ser.epoch);
 							  $("#data-series-list").append(new_line);
 							  retrieve_thumbnail(ser, new_line);
