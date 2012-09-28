@@ -66,7 +66,7 @@ var $Series = new function() {
 						  });
 				  },
 				  error: function(xhr, status, err) {
-					  $("#data-series-list").text("<em>He's fallen in the water!</em>");
+					  $("#data-series-list").html("<em>He's fallen in the water!</em>");
 				  }
 				});
 		}
