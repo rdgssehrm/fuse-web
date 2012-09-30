@@ -6,4 +6,22 @@
 .thumbnail.graph {
    width: 600px;
    height: 75px;
+
+.series-meta {
+	background: #fed;
+	border-radius: 5px;
+	margin: 3px;
+	padding: 0.5ex;
+}
+
+.series.name {
+	font-size: 120%;
+	font-weight: normal;
+	margin: 1ex;
+}
+
+.series.description {
+	font-size: 70%;
+}
+
 }

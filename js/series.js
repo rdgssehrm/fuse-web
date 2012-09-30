@@ -61,6 +61,9 @@ var $Series = new function() {
 							  new_line.attr("id", "series-meta-" + ser.id);
 							  new_line.find(".name").text(ser.name);
 							  new_line.find(".epoch").text(ser.epoch);
+							  new_line.find(".description").text(ser.description);
+							  new_line.find(".unit-text").text(ser.units);
+
 							  $("#data-series-list").append(new_line);
 							  retrieve_thumbnail(ser, new_line);
 						  });
