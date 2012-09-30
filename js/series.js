@@ -64,6 +64,27 @@ var $Series = new function() {
 							  new_line.find(".description").text(ser.description);
 							  new_line.find(".unit-text").text(ser.units);
 
+							  var ser_data_uri = data_uri + "series/" + ser.id
+								  + "/data/?type=";
+							  var ser_meta_uri = data_uri + "series/" + ser.id
+								  + "/?type=";
+							  $.each(
+								  ["JSON", "CSV", "TSV", "XLS"],
+								  function(i, fmt) {
+									  new_line.find(".download-"+fmt).wrap(
+										  "<a href='" + ser_data_uri
+											  + fmt.toLowerCase() + "' />");
+								  });
+							  $.each(
+								  ["JSON", "CSV", "RDF"],
+								  function(i, fmt) {
+									  new_line.find(".download-meta-"+fmt)
+										  .wrap(
+											  "<a href='" + ser_meta_uri
+												  + fmt.toLowerCase()
+												  + "' />");
+								  });
+
 							  $("#data-series-list").append(new_line);
 							  retrieve_thumbnail(ser, new_line);
 						  });

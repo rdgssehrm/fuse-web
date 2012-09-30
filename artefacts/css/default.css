@@ -24,4 +24,11 @@
 	font-size: 70%;
 }
 
+
+.download {
+	float: right;
+	background: #edc;
+	border-radius: 4px;
+	font-size: 75%;
+	padding: 1ex;
 }
