@@ -4,8 +4,10 @@
 }
 
 .thumbnail.graph {
-   width: 600px;
-   height: 75px;
+	margin: 1em;
+	width: 600px;
+	height: 75px;
+}
 
 .series-meta {
 	background: #fed;
@@ -24,6 +26,15 @@
 	font-size: 70%;
 }
 
+.yaxisLabel {
+	-moz-transform: rotate(-90deg);
+	-moz-transform-origin: 0 0;
+	left: 2px;
+	top: 50%;
+	font-size: 75%;
+	position: absolute;
+	text-align: center;
+}
 
 .download {
 	float: right;

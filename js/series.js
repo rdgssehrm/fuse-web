@@ -36,9 +36,32 @@ var $Series = new function() {
 			{ dataType: "json",
 			  success: function(data, status, xhr) {
 				  var graph = dom.find(".thumbnail");
-				  var data = [[0,0], [1, 2], [2, 1]]; // Data for a single series
-				  var options = { };
-				  var plot = $.plot(graph, [data]);
+				  // Data for a single series
+				  var data = data.map(function(elt, idx, ary){
+					  return [new Date(elt[0]).getTime(), elt[1]];
+				  });
+				  // Options/description for the series
+				  var series = {
+					  data: data,
+					  color: "#000088"
+				  };
+				  // Global graph options
+				  var options = {
+					  series: { shadowSize: 0 },
+					  grid: { backgroundColor: "#ffffff" },
+					  xaxis: {
+						  mode: "time",
+						  timeformat: "%y-%m-%d"
+					  },
+					  yaxis: {
+						  labelWidth: 50
+					  }
+				  };
+				  var plot = $.plot(graph, [series], options);
+				  var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
+					  .text(ser.units)
+					  .appendTo(graph);
+				  yaxisLabel.css("margin-top", yaxisLabel.width() / 2 - 10);
 			  },
 			  error: function(xhr, status, err) { dom.text("<em>Ouch!</em>"); }
 			});
